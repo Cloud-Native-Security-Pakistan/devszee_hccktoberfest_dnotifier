@@ -1,0 +1,34 @@
+{
+  "name": "support-triage-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "check:dnotifier": "node --env-file=.env.local scripts/check-dnotifier.mjs",
+    "test:connection": "node --test tests/check-dnotifier.test.mjs",
+    "check:rag": "node --env-file=.env.local scripts/check-rag.mjs",
+    "test:rag": "node --test tests/check-rag.test.mjs"
+  },
+  "dependencies": {
+    "@dnotifier-realtime/dnotifier": "^1.1.25",
+    "next": "^16.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "server-only": "^0.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "pdf-parse": "^2.4.5",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}
